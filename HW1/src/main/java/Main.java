@@ -17,6 +17,10 @@ import Methods.Decorator;
 import Methods.MyOperations;
 
 public class Main {
+    /**
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         int result = 0;
         result = MyOperations.sum(2,3);

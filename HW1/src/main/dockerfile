@@ -1,5 +1,14 @@
+# use current image
  FROM bellsoft/liberica-openjdk-alpine:11.0.16
+ # copy data from project folder java to image folder src
  COPY ./java ./src
+ # make directory in image
  RUN mkdir ./out
+ # compile files in image folder src and put copiled files in src. Sourcepath is path for source files
  RUN javac -sourcepath ./src -d out src/Main.java
+ # run copiled file Main.class
  CMD java -classpath ./out Main
+
+ # command in terminal:
+ # docker build . -t myjavaapp
+ # docker run myjavaapp
