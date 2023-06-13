@@ -36,7 +36,7 @@ public class Main {
 
         }
 
-        Comparator <BaseWorker> myComparator = new WorkerComparator();
+        Comparator<BaseWorker> myComparator = new WorkerComparator();
         System.out.println();
         System.out.println("Sorted array (via Comparator):");
         Arrays.sort(workers1, myComparator);
@@ -46,13 +46,18 @@ public class Main {
         }
         System.out.println();
         System.out.println("Array from class WorkersArray using foreach");
-        for (BaseWorker value: WorkersArray.workers){
+        for (BaseWorker value : WorkersArray.workers) {
             System.out.println("Worker " + value.name + " has salary " + value.getAverageSalary(value.rate));
+        }
 
+        EmployeeHolder holder = new EmployeeHolder(Arrays.stream(workers).toList());
+        for (BaseWorker employee : holder) {
+            System.out.println(employee);
         }
 
 
-
     }
+
+
 }
 
