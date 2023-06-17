@@ -1,8 +1,9 @@
 import java.text.ParseException;
 
-public class MyArrayDataException extends NumberFormatException {
-    public MyArrayDataException(String s) {
-        super(s);
+public class MyArrayDataException extends RuntimeException {
+
+    public MyArrayDataException(String message) {
+        super(message);
     }
 }
 
